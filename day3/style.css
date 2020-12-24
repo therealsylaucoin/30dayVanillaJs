@@ -11,7 +11,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 /* Variables */
 :root {
     --base: goldenrod;
-    --spacing: 10px;
+    --spacing: 0px;
     --blur: 0px;
 }
 
