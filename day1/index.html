@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a href="../index.html">Back to projects</a>
     <!-- Divs for keys -->
     <div class="keys">
         <div data-key="65" class="key">
@@ -59,35 +60,7 @@
     <audio data-key="75" src="audio/tom.wav"></audio>
     <audio data-key="76" src="audio/tink.wav"></audio>
 
-    <script>
-        function playSound(e){
-            //find the audio element that has the same data attribute as the key we are pressing.
-            const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-            //find the key to trigger the animation
-            const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
-            if (!audio) return; //if not key bind, stop the function from running
-            //go back to the start of the audio file before it plays, that way it can play over and over again.
-            audio.currentTime = 0;
-            //play audio
-            audio.play();
-            //add the class playing
-            key.classList.add('playing');//same as key.addClass('playing')
-        }
-
-        function removeTransition(e){
-            //propertyName is where "transform" lives (console.log the event to se it!)
-            if (e.propertyName !== 'transform') return;
-            this.classList.remove('playing'); 
-        }
-
-        //grab all the keys and listen to each one of them fopr the transitionend
-        const keys = document.querySelectorAll('.key');
-        keys.forEach(key => key.addEventListener('transitionend', removeTransition));
-
-        //listen for the keydown event, and then run this function
-        window.addEventListener('keydown', playSound);
-
-    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>
