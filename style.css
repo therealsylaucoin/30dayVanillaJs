@@ -27,7 +27,7 @@ html {
 body {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 2rem;
-    background-color: #bde0fe;
+    /* background-color: #bde0fe; */
 }
 
 header {
@@ -48,17 +48,25 @@ a {
     text-decoration: none;
 }
 
-img {
+ul {
+    list-style-type: none;
+}
+
+li {
+    padding: 10px;
+}
+
+/* img {
     height: auto;
     width: 100%;
 }
 
 .project {
     position: absolute;
-}
+} */
 
 
-.one {
+/* .one {
     height: 300px;
     width: 300px;
     bottom: 10vh;
@@ -80,10 +88,10 @@ img {
     transform: translateX(50%);
     top: 30%;
     right: 30%;
-}
+} */
 
 /* FOOTER STYLES */
-footer {
+/* footer {
     text-align: center;
     color: white;
     height: 20vh;
@@ -97,4 +105,4 @@ footer a {
 
 footer p {
     padding-top: 150px;
-}
+} */
