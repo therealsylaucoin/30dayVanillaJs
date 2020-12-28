@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Console Tricks!</title>
+</head>
+<body>
+
+  <p onClick="makeGreen()">×BREAK×DOWN×</p>
+
+  <script>
+    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'Hugo', age: 8 }];
+
+    function makeGreen() {
+      const p = document.querySelector('p');
+      p.style.color = '#BADA55';
+      p.style.fontSize = '50px';
+    }
+
+    // Regular
+    console.log('Hello!');
+
+    // Interpolated
+    //(but backticks and string literals essentially do the same)
+    console.log('Hello I am %s!', 'Syl');
+
+    // Styled
+    console.log('%c Wow! Styles console!', 'font-size: 20px; background: hotpink;')
+
+    // warning!
+    console.warn('Oh no! A warning!');
+
+    // Error :|
+    console.error('There is an error!');
+
+    // Info
+    console.info('Fun facts here!');
+
+    // Testing
+    console.assert( 1 === 2, 'You are wrong');
+    
+    // clearing
+    // console.clear();
+    
+    // Viewing DOM Elements
+    const p = document.querySelector('p');
+    console.log(p);
+    console.dir(p);
+
+    // Grouping together
+    dogs.forEach(dog => {
+      console.groupCollapsed(`${dog.name}`);
+        console.log(`This is ${dog.name}`);
+        console.log(`${dog.name} is ${dog.age} years old.`);
+        console.log(`${dog.name} is ${dog.age * 7} human years old.`);
+      console.groupEnd(`${dog.name}`);
+    })
+
+    // counting
+    console.count(p);
+
+    // timing
+    console.time('fetching data');
+    fetch('https://api.github.com/users/therealsylaucoin')
+      .then(data => data.json())
+      .then(data => {
+        console.timeEnd('fetching data');
+        console.log(data);
+      })
+
+  </script>
+</body>
+</html>
