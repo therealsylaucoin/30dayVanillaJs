@@ -10,8 +10,8 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 /* Variables */
 :root {
-    --base: goldenrod;
-    --spacing: 0px;
+    --base:#6B548C;
+    --spacing: 10px;
     --blur: 0px;
 }
 
@@ -34,17 +34,19 @@ img {
     background: var(--base);
     filter: blur(var(--blur));
     width: 600px;
+    min-height: 400px;
 }
 
 /* styling */
 body {
     text-align: center;
-    background: #bde0fe;
+    background-image:url(gallery.jpg);
+    background-size: cover;
+    background-position: center;
     color: black;
     font-family: 'helvetica neue', sans-serif;
     font-size: 1.8rem;
 }
-
 
 
 .hl {

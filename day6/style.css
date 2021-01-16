@@ -1,9 +1,9 @@
 html {
   box-sizing: border-box;
-  background: #ffc600;
   font-family: 'helvetica neue';
   font-size: 20px;
   font-weight: 200;
+  background-color: silver;
 }
 
 *, *:before, *:after {
@@ -70,7 +70,7 @@ span.population {
 }
 
 .hl {
-  background: #ffc600;
+  background: thistle;
 }
 
 a {
